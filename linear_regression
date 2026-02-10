@@ -2,11 +2,11 @@ import numpy as np
 import pandas as pd
 
 df = pd.read_csv("weatherHistory.csv")
-df = df['Humidity','Pressure']
+df = df['Humidity','Temperature']
 df.dropna(inplace=True)
 
 X = df['Humidity'].values
-y = df['Pressure'].values
+y = df['Temperature'].values
 n = len(X)
 
 w = 0 
